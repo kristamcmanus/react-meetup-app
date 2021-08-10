@@ -4,8 +4,8 @@ import classes from './NewMeetupForm.module.css';
 
 function NewMeetupForm(props) {
   const titleInputRef = useRef();
-  const imageInputRef = userRef();
-  const addressInputRef = userRef();
+  const imageInputRef = useRef();
+  const addressInputRef = useRef();
   const descriptionInputRef = useRef();
 
   function submitHandler(event) {
@@ -27,7 +27,7 @@ function NewMeetupForm(props) {
   }
   return (
     <Card>
-      <form className={classes.form} onSubmit={}>
+      <form className={classes.form} onSubmit={submitHandler}>
         <div className={classes.control}>
           <label htmlFor="title">Meetup Title</label>
           <input type="text" required id="title" ref={titleInputRef} />
